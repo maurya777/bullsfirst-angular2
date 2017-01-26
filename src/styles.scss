@@ -1,0 +1,170 @@
+@import 'material-theme.scss';
+@import '../node_modules/@swimlane/ngx-datatable/release/datatable.component.css';
+@import '../node_modules/@swimlane/ngx-datatable/release/material.css';
+@import '../node_modules/@swimlane/ngx-datatable/release/assets/icons.css';
+
+.ngx-datatable .datatable-header {
+  background-color: #8C8C8C;
+}
+.ngx-datatable.material .datatable-header .datatable-header-cell {
+  color: #F8E5C9;
+}
+.bf-table-total .total-cell,
+.ngx-datatable.material .datatable-header .datatable-header-cell,
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+  padding: 0.1rem 0.5rem;
+}
+.ngx-datatable.material .datatable-body .datatable-row-wrapper .datatable-body-row {
+  border-bottom: 1px solid #cccccc;
+}
+.ngx-datatable.material .datatable-body .datatable-row-wrapper:last-child .datatable-body-row:last-child {
+  border-bottom: 0;
+}
+.ngx-datatable.material .datatable-header .datatable-header-cell,
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+  text-align: right;
+}
+.ngx-datatable.material .datatable-header .datatable-header-cell:first-child,
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell .left {
+  text-align: left;
+}
+.ngx-datatable.material .datatable-header .datatable-header-cell .bf-table-cell {
+  margin:auto;
+  line-height: 1;
+}
+.ngx-datatable.material .datatable-header .resize-handle {
+  border-color: #F8E5C9;
+}
+.ngx-datatable.material {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.bf-table-total {
+  font-weight: bold;
+  text-align: right;
+  border-top: 4px solid #cccccc;
+}
+.bf-table-total .total-cell {
+  float: left;
+}
+.bf-table-total .total-cell.market-value {
+  width: 375px;
+}
+.bf-table-total .total-cell.cash {
+  width: 115px;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(assets/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(assets/iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(assets/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+body {
+    font-size: 14px;
+    font-family: "Helvetica Neue", "Arial", "sans-serif";
+    background-color: gray;
+    margin: 0;
+}
+
+.content-section {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+button {
+    width: 100px;
+    background: orange;
+    border: 1px solid darkred;
+    margin-right: 10px;
+
+    box-shadow: 1px 1px 3px #333;
+}
+
+table {
+    width: 100%;
+}
+table td {
+    padding: 5px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+}
+
+.content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.left-section {
+    flex: 1;
+    margin-right: 20px;
+    width: 600px;
+}
+.left-section .header {
+    display: flex;
+    height: 50px;
+}
+
+.left-section .header button {
+    width: 150px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    margin-left: 15px;
+    line-height: 1;
+}
+.left-section .header > .actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-section {
+    width: 300px;
+    background: #ccc;
+}
+.right-section .chart {
+    height: 300px;
+}
+
+.right-section .help-label {
+    padding: 10px;
+}

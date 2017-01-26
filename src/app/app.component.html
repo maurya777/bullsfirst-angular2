@@ -1,3 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<section class="content-section">
+  <app-header></app-header>
+  <div class="main-container">
+    <main class="content">
+      <app-table [rows]="rows" [totals]="totals" (addAccount)="addAccount()"></app-table>
+      <aside class="right-section">
+          <img class="chart" src="assets/images/chart.png" alt="Chart">
+          <div class="help-label">Click on an account to view positions</div>
+      </aside>
+    </main>
+  </div>
+</section>
+<footer>This is a demo application. All data displayed is ficticious.</footer>

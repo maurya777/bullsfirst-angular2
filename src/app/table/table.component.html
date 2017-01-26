@@ -1,0 +1,54 @@
+<section class="left-section">
+    <div class="header">
+        <h1>Accounts</h1>
+        <div class="actions">
+            <button md-raised-button (click)="onAddAccount()">
+              <i class="material-icons">add_circle_outline</i>
+              <span>Add Account</span>
+            </button>
+            <button md-raised-button>
+              <i class="material-icons">autorenew</i>
+              <span>Refresh</span>
+            </button>
+        </div>
+    </div>
+    <ngx-datatable
+    class="material"
+    [rows]="rows"
+    [headerHeight]="25"
+    [rowHeight]="30"
+    [columnMode]="'force'">
+    <ngx-datatable-column name="Name" [width]="280">
+      <template let-value="value" ngx-datatable-cell-template>
+        <div class="bf-table-cell left">
+          {{ value }}
+        </div>
+      </template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Market Value" [width]="150">
+      <template let-value="value" ngx-datatable-cell-template>
+        <div class="bf-table-cell">
+          {{ value | currency:"USD":true }}
+        </div>
+      </template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Cash" [width]="150">
+      <template let-value="value" ngx-datatable-cell-template>
+        <div class="bf-table-cell">
+          {{ value | currency:"USD":true }}
+        </div>
+      </template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Legend" [width]="100">
+      <template let-value="value" ngx-datatable-cell-template>
+        <div class="bf-table-cell" style="width:50px;height:25px;margin-left: auto;padding: 5px">
+          <div style="width:100%;height:100%" [style.backgroundColor]="value"></div>
+        </div>
+      </template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+  <div class="bf-table-total">
+    <div class="total-cell market-value">{{ totals.marketValue | currency:'USD':true }}</div>
+    <div class="total-cell cash">{{ totals.cash | currency:'USD':true }}</div>
+  </div>
+</section>
